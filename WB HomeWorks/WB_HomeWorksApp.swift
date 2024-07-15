@@ -1,17 +1,22 @@
-//
-//  WB_HomeWorksApp.swift
-//  WB HomeWorks
-//
-//  Created by Николай Казанин on 15.07.2024.
-//
-
 import SwiftUI
+import HomeWorkUI
+import PinCodeScreen
 
 @main
-struct WB_HomeWorksApp: App {
+struct WB_HomeworkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Asset.BasicColors.darkPurple.swiftUIColor
+                .overlay {
+                    Asset.Images.bgImage.swiftUIImage.resizable()
+                }
+                .ignoresSafeArea()
+                .fullScreenCover(isPresented: .constant(true), content: {
+                    PinCodeScreen.Factory.makePinCodeScreen(
+                        phoneNumber: "+7 (921) 233-123-44",
+                        dependency: .failing
+                    )
+                })
         }
     }
 }

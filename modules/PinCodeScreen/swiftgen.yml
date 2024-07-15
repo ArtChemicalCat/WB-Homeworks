@@ -1,0 +1,11 @@
+input_dir: Sources/PinCodeScreen/Resources
+output_dir: ${DERIVED_SOURCES_DIR}
+
+strings:
+  inputs:
+    - Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.generated.swift
+      params:
+        publicAccess: true
