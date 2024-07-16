@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240BE7912C46487C004A2955 /* SendPhoneScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SendPhoneScreen; path = modules/SendPhoneScreen; sourceTree = "<group>"; };
 		24785BB92C4519FD003A4908 /* HomeWorkUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeWorkUI; path = modules/HomeWorkUI; sourceTree = "<group>"; };
 		24785BBA2C451A06003A4908 /* PinCodeScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PinCodeScreen; path = modules/PinCodeScreen; sourceTree = "<group>"; };
 		2479690B2C44C9F800ABB9C6 /* WB HomeWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WB HomeWorks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +49,7 @@
 		247969022C44C9F800ABB9C6 = {
 			isa = PBXGroup;
 			children = (
+				240BE7912C46487C004A2955 /* SendPhoneScreen */,
 				24785BBA2C451A06003A4908 /* PinCodeScreen */,
 				24785BB92C4519FD003A4908 /* HomeWorkUI */,
 				2479690D2C44C9F800ABB9C6 /* WB HomeWorks */,
