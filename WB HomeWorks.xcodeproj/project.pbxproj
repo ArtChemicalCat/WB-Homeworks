@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240BE7932C46531B004A2955 /* SendPhoneScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 240BE7922C46531B004A2955 /* SendPhoneScreen */; };
 		24785BBD2C451A0D003A4908 /* HomeWorkUI in Frameworks */ = {isa = PBXBuildFile; productRef = 24785BBC2C451A0D003A4908 /* HomeWorkUI */; };
 		24785BBF2C451A10003A4908 /* PinCodeScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 24785BBE2C451A10003A4908 /* PinCodeScreen */; };
 		2479690F2C44C9F800ABB9C6 /* WB_HomeWorksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479690E2C44C9F800ABB9C6 /* WB_HomeWorksApp.swift */; };
@@ -32,6 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24785BBD2C451A0D003A4908 /* HomeWorkUI in Frameworks */,
+				240BE7932C46531B004A2955 /* SendPhoneScreen in Frameworks */,
 				24785BBF2C451A10003A4908 /* PinCodeScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +106,7 @@
 			packageProductDependencies = (
 				24785BBC2C451A0D003A4908 /* HomeWorkUI */,
 				24785BBE2C451A10003A4908 /* PinCodeScreen */,
+				240BE7922C46531B004A2955 /* SendPhoneScreen */,
 			);
 			productName = "WB HomeWorks";
 			productReference = 2479690B2C44C9F800ABB9C6 /* WB HomeWorks.app */;
@@ -368,6 +371,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		240BE7922C46531B004A2955 /* SendPhoneScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SendPhoneScreen;
+		};
 		24785BBC2C451A0D003A4908 /* HomeWorkUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomeWorkUI;

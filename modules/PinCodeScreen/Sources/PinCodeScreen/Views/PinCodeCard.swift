@@ -12,16 +12,16 @@ struct PinCodeCard: View {
     var body: some View {
         VStack(spacing: .zero) {
             Asset.Icons.envelop.swiftUIImage
-                .frame(width: .quintuple, height: .quintuple)
+                .frame(width: .size.quintuple, height: .size.quintuple)
             
             Text(phone)
                 .font(.titleH2)
-                .padding(.top, .double)
-                .padding(.bottom, .triple)
+                .padding(.top, .spacing.double)
+                .padding(.bottom, .spacing.triple)
             
             PinCodeField(code: code)
-                .padding(.bottom, .double)
-                .padding(.horizontal, .oneAndHalf)
+                .padding(.bottom, .spacing.double)
+                .padding(.horizontal, .spacing.oneAndHalf)
             
             if code.isFailed {
                 Text(L10n.wrongPassword)
@@ -30,7 +30,7 @@ struct PinCodeCard: View {
             
             if !code.canSend {
                 Text(L10n.requestAgainAfter(code.tillNextRequest))
-                    .padding(.bottom, .triple)
+                    .padding(.bottom, .spacing.triple)
                     .font(.bodyRegular)
             }
             
@@ -43,9 +43,9 @@ struct PinCodeCard: View {
             .buttonStyle(.primary)
         }
         .opacity(code.isSending ? 0 : 1)
-        .padding(.bottom, .sextuple)
-        .padding(.top, .topPadding)
-        .padding(.horizontal, .triple)
+        .padding(.bottom, .spacing.sextuple)
+        .padding(.top, .spacing.topPadding)
+        .padding(.horizontal, .spacing.triple)
         .background {
             gradient()
         }
@@ -55,7 +55,7 @@ struct PinCodeCard: View {
                 .tint(.white)
                 .opacity(code.isSending ? 1 : 0)
         }
-        .clipShape(.rect(cornerRadius: .cornerRadius))
+        .clipShape(.rect(cornerRadius: .radius.cornerRadius))
     }
     
     // MARK: - Methods
@@ -72,8 +72,10 @@ struct PinCodeCard: View {
 }
 
 // MARK: - Constants
-fileprivate extension CGFloat {
-    static let topPadding: CGFloat = 46
-    static let cornerRadius: CGFloat = 28
+private extension HomeWorkUI.Spacings {
+    var topPadding: Number { 46 }
+}
 
+private extension CornerRadius {
+    var cornerRadius: Number { 28 }
 }

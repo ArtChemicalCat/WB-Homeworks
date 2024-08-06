@@ -1,6 +1,7 @@
 import SwiftUI
 import HomeWorkUI
 import PinCodeScreen
+import SendPhoneScreen
 
 @main
 struct WB_HomeworkApp: App {
@@ -12,10 +13,11 @@ struct WB_HomeworkApp: App {
                 }
                 .ignoresSafeArea()
                 .fullScreenCover(isPresented: .constant(true), content: {
-                    PinCodeScreen.Factory.makePinCodeScreen(
-                        phoneNumber: "+7 (921) 233-123-44",
-                        dependency: .failing
-                    )
+                    SendPhoneView()
+//                    PinCodeScreen.Factory.makePinCodeScreen(
+//                        phoneNumber: "+7 (921) 233-123-44",
+//                        dependency: .failing
+//                    )
                 })
         }
     }

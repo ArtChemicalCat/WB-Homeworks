@@ -18,16 +18,16 @@ struct PinCodeField: View {
         HStack(spacing: .zero) {
             ForEach(0..<codeLength, id: \.self) { index in
                 Text(code.digit(at: index))
-                    .frame(height: .digitSize.height)
-                    .frame(maxWidth: .digitSize.width)
+                    .frame(height: .size.digitHeight)
+                    .frame(maxWidth: .size.digitWidth)
                     .font(.titleH1)
                     .foregroundStyle(
                         code.isFailed ? Asset.TextColors.redAlert.swiftUIColor : .white
                     )
                     .background(Color.white.opacity(0.08))
-                    .cornerRadius(.medium)
+                    .cornerRadius(.radius.medium)
                     .overlay {
-                        RoundedRectangle(cornerRadius: .medium)
+                        RoundedRectangle(cornerRadius: .radius.medium)
                             .stroke(lineWidth: 1)
                             .foregroundStyle(
                                 strokeColor()
@@ -47,8 +47,8 @@ struct PinCodeField: View {
                     isFocused = !disabled
                 }
         )
-        .padding(.top, .topPadding)
-        .padding(.bottom, .bottomPadding)
+        .padding(.top, .spacing.topPadding)
+        .padding(.bottom, .spacing.bottomPadding)
         .onChange(of: code.value) { old, new in
             if inputIsValid(new) {
                 return
@@ -80,8 +80,9 @@ struct PinCodeField: View {
 }
 
 // MARK: - Constants
-fileprivate extension CGFloat {
-    static let digitSize: CGSize = .init(width: 64, height: 80)
-    static let topPadding: CGFloat = 18
-    static let bottomPadding: CGFloat = 30
+private extension Spacings {
+    var digitHeight: Number { 80 }
+    var digitWidth: Number { 64 }
+    var topPadding: Number { 18 }
+    var bottomPadding: Number { 30 }
 }
