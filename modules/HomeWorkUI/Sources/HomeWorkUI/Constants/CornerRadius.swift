@@ -1,22 +1,16 @@
 import SwiftUI
 
-public enum CornerRadius: CGFloat {
+public struct CornerRadius<Number: Numeric> {
     /// 8 pt.
-    case small = 8
+    public let small: Number = 8
     /// 12 pt.
-    case medium = 12
+    public let medium: Number = 12
     /// 16 pt.
-    case large = 16
+    public let large: Number = 16
 }
 
-public extension View {
-    func cornerRadius(_ radius: CornerRadius) -> some View {
-        clipShape(RoundedRectangle(cornerRadius: radius))
-    }
-}
-
-public extension RoundedRectangle {
-    init(cornerRadius: CornerRadius) {
-        self.init(cornerRadius: cornerRadius.rawValue)
+public extension CGFloat {
+    static var radius: CornerRadius<Self> {
+        CornerRadius()
     }
 }

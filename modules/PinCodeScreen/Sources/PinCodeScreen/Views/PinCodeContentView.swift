@@ -8,7 +8,7 @@ struct PinCodeContentView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                VStack(spacing: .quadruple) {
+                VStack(spacing: .spacing.quadruple) {
                     PinCodeCard(phone: phoneNumber)
                     
                     Button {
@@ -20,9 +20,9 @@ struct PinCodeContentView: View {
                         }
                         .font(.bodyRegular)
                     }
-                    .padding(.bottom, .double)
+                    .padding(.bottom, .spacing.double)
                 }
-                .padding(.horizontal, .double)
+                .padding(.horizontal, .spacing.double)
                 .frame(maxWidth: .infinity)
                 .frame(maxWidth: 400, maxHeight: .infinity)
                 .frame(maxWidth: geometry.size.width, minHeight: geometry.size.height)

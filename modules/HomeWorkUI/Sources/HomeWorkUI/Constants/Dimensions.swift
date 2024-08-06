@@ -1,40 +1,28 @@
 import SwiftUI
 
-public enum Dimension: CGFloat {
+public struct Spacings<Number: Numeric> {
     /// 8 pt.
-    case single = 8
+    public let single: Number = 8
     /// 12 pt.
-    case oneAndHalf = 12
+    public let oneAndHalf: Number = 12
     /// 16 pt.
-    case double = 16
+    public let double: Number = 16
     /// 24 pt.
-    case triple = 24
+    public let triple: Number = 24
     /// 32 pt.
-    case quadruple = 32
+    public let quadruple: Number = 32
     /// 40 pt.
-    case quintuple = 40
+    public let quintuple: Number = 40
     /// 48 pt.
-    case sextuple = 48
+    public let sextuple: Number = 48
 }
 
-public extension View {
-    func padding(_ edges: Edge.Set, _ length: Dimension) -> some View {
-        padding(edges, length.rawValue)
+public extension CGFloat {
+    static var spacing: Spacings<Self> {
+        Spacings()
     }
     
-    func frame(width: Dimension?, height: Dimension?) -> some View {
-        frame(width: width?.rawValue, height: height?.rawValue)
-    }
-}
-
-public extension VStack {
-    init(alignment: HorizontalAlignment = .center, spacing: Dimension, @ViewBuilder content: () -> Content) {
-        self.init(alignment: alignment, spacing: spacing.rawValue, content: content)
-    }
-}
-
-public extension HStack {
-    init(alignment: VerticalAlignment = .center, spacing: Dimension, @ViewBuilder content: () -> Content) {
-        self.init(alignment: alignment, spacing: spacing.rawValue, content: content)
+    static var size: Spacings<Self> {
+        Spacings()
     }
 }

@@ -10,7 +10,7 @@ public struct PrimaryButtonStyle: ButtonStyle {
                     configuration.isPressed ? 0.8 : 1
                 )
             )
-            .cornerRadius(.medium)
+            .cornerRadius(.radius.medium)
     }
 }
 
