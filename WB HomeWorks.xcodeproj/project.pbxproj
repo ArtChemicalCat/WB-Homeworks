@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24785BBD2C451A0D003A4908 /* HomeWorkUI in Frameworks */ = {isa = PBXBuildFile; productRef = 24785BBC2C451A0D003A4908 /* HomeWorkUI */; };
+		24785BBF2C451A10003A4908 /* PinCodeScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 24785BBE2C451A10003A4908 /* PinCodeScreen */; };
 		2479690F2C44C9F800ABB9C6 /* WB_HomeWorksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479690E2C44C9F800ABB9C6 /* WB_HomeWorksApp.swift */; };
 		247969112C44C9F800ABB9C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247969102C44C9F800ABB9C6 /* ContentView.swift */; };
 		247969132C44C9FA00ABB9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247969122C44C9FA00ABB9C6 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24785BB92C4519FD003A4908 /* HomeWorkUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeWorkUI; path = modules/HomeWorkUI; sourceTree = "<group>"; };
+		24785BBA2C451A06003A4908 /* PinCodeScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PinCodeScreen; path = modules/PinCodeScreen; sourceTree = "<group>"; };
 		2479690B2C44C9F800ABB9C6 /* WB HomeWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WB HomeWorks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2479690E2C44C9F800ABB9C6 /* WB_HomeWorksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WB_HomeWorksApp.swift; sourceTree = "<group>"; };
 		247969102C44C9F800ABB9C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24785BBD2C451A0D003A4908 /* HomeWorkUI in Frameworks */,
+				24785BBF2C451A10003A4908 /* PinCodeScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24785BBB2C451A0D003A4908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		247969022C44C9F800ABB9C6 = {
 			isa = PBXGroup;
 			children = (
+				24785BBA2C451A06003A4908 /* PinCodeScreen */,
+				24785BB92C4519FD003A4908 /* HomeWorkUI */,
 				2479690D2C44C9F800ABB9C6 /* WB HomeWorks */,
 				2479690C2C44C9F800ABB9C6 /* Products */,
+				24785BBB2C451A0D003A4908 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = "WB HomeWorks";
+			packageProductDependencies = (
+				24785BBC2C451A0D003A4908 /* HomeWorkUI */,
+				24785BBE2C451A10003A4908 /* PinCodeScreen */,
+			);
 			productName = "WB HomeWorks";
 			productReference = 2479690B2C44C9F800ABB9C6 /* WB HomeWorks.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +364,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24785BBC2C451A0D003A4908 /* HomeWorkUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeWorkUI;
+		};
+		24785BBE2C451A10003A4908 /* PinCodeScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PinCodeScreen;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 247969032C44C9F800ABB9C6 /* Project object */;
 }
